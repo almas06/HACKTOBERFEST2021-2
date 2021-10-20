@@ -2,13 +2,25 @@
 using namespace std;
 int main()
 {
-    int i, n, num, first, last, middle;
+    int i, n, num, first, last, middle, j, k;
     cout<<"Enter the number of Elements to be taken:- ";
     cin>>n;
     int arr[n];
     cout<<"Enter n Elements (in ascending order): ";
     for(i=0; i<n; i++)
         cin>>arr[i];
+    for(j=0;j<n;j++)
+    {
+        for(k=0;k<n-j-1;k++)
+        {
+            if (arr[k]>arr[k+1])
+            {
+                t=arr[k];
+                arr[k]=arr[k+1];
+                arr[k+1]=t;
+            }
+        }
+    }
     cout<<"\nEnter Element to be Search: ";
     cin>>num;
     first = 0;
